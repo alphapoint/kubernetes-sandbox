@@ -2,10 +2,6 @@ sudo: required
 
 language: node_js
 
-cache:
-  directories:
-  - node_modules
-
 services:
   - docker
 
@@ -19,8 +15,11 @@ notifications:
 before_script:
   - echo "in here"
 
-deploy:
-  provider: script
-  script: bash deploy.sh
-  on:
-    branch: master
+script: 
+  - echo "now here"
+
+# deploy:
+#   provider: script
+#   script: bash ./deploy.sh
+#   on:
+#     branch: master
