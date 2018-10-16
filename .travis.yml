@@ -16,7 +16,7 @@ notifications:
   email:
     - jared.starin@alphapoint.com
 
-before_install:
+before_script:
   - echo "in here"
 
 deploy:
