@@ -14,12 +14,16 @@ notifications:
 
 before_script:
   - echo "in here"
+  # - docker build -t ubiq-client ./ubiq-client
+  # - docker build -t ubiq-node ./ubiq-client
+  # - docker tag apdocker
+
 
 script: 
-  - echo "now here"
+  - echo "running tests"
 
-# deploy:
-#   provider: script
-#   script: bash ./deploy.sh
-#   on:
-#     branch: master
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master
