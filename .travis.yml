@@ -14,6 +14,8 @@ notifications:
 
 before_script:
   - echo "in here"
+  - echo "building all docker images..."
+  - echo "pushing images to container registry"
   # - docker build -t ubiq-client ./ubiq-client
   # - docker build -t ubiq-node ./ubiq-client
   # - docker tag apdocker
@@ -21,6 +23,10 @@ before_script:
 
 script: 
   - echo "running tests"
+
+
+after_script:
+  - echo "about to deploy to K8 cluster "
 
 deploy:
   provider: script
